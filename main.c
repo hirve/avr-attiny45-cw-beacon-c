@@ -81,15 +81,15 @@ const unsigned char letters[61][8] PROGMEM = {
 };
 
 void dot (void) {
-  PORTB = 0b00001000;
+  PORTB = 0b00011000;
   _delay_ms(DOT_LENGTH_MS);
-  PORTB = 0b00000000;
+  PORTB = 0b00010000;
 }
 
 void dash (void) {
-  PORTB = 0b00001000;
+  PORTB = 0b00011000;
   _delay_ms(DOT_LENGTH_MS * 3);
-  PORTB = 0b00000000;
+  PORTB = 0b00010000;
 }
 
 void dot_space (void) {
@@ -106,7 +106,8 @@ void word_minus_dot_space (void) {
 
 int main (void) {
   int i, j;
-  DDRB = 0b00001000;
+  DDRB = 0b00011000;
+  PORTB = 0b00010000;
   char message[] = MESSAGE;
   while (1) {
     for (i = 0; message[i] != 0; i++) {
