@@ -20,3 +20,7 @@ clean:
 
 flash: $(TARGET).hex
 	avrdude -p $(MCU) -c avrispmkII -P $(PORT) -U flash:w:$(TARGET).hex
+
+erase: $(TARGET).hex
+	avrdude -p $(MCU) -c avrispmkII -P $(PORT) -e
+
