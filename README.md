@@ -15,8 +15,4 @@ make flash
 ```
 
 ## Fuse bytes
-The project has no ability to set fuse bytes. I use default ones for my attiny45. If it's different for your chip - you need to set fuses manually. Or even commit it to project :)
-
-## Example
-The possible PCB sample is in **beacon.l.svg**
-Use https://veiseliha.com/ converter to get G-code to cut it. The tool diameter is 0.1 mm.
+The project has no ability to set fuse bytes. I use default ones for my attiny45. If it's different for your chip - you need to set fuses manually.
